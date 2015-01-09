@@ -1,0 +1,495 @@
+<!DOCTYPE HTML>
+<html lang="en-US" manifest="../manifest.appcache">
+    
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        
+        <meta charset="UTF-8">
+        <title>Variables | Ruby desde Cero - Escuelaweb</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="highercomve">
+        <meta name="description" content="En este &quot;libro&quot; voy a crear un resumen del contenido del curso de Ruby desde Cero de Escuelaweb.net, de esa manera los alumnos podran disponer de un contenido que puedan leer facilmente desde otras herramientas distintas a la web.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../programacion_basica_con_ruby/estructuras_de_control.html" />
+        
+        
+        <link rel="prev" href="../programacion_basica_con_ruby/README.html" />
+        
+
+        <meta property="og:title" content="Variables | Ruby desde Cero - Escuelaweb">
+        <meta property="og:site_name" content="Ruby desde Cero - Escuelaweb">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/highercomve">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+        
+    </head>
+    <body>
+        
+        
+
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+
+
+        
+    <div class="book" data-github="highercomve/ruby_cero" data-level="3.1" data-basepath=".." data-revision="1410452499013">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
+    
+    <a href="https://github.com/highercomve/ruby_cero" target="_blank" class="btn pull-left home-bookmark" aria-label="GitHub home"><i class="fa fa-bookmark-o"></i></a>
+    
+    <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
+    <span id="font-settings-wrapper">
+        <a href="#" class="btn pull-left toggle-font-settings" aria-label="Toggle font settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="btn-group btn-block">
+        <button id="reduce-font-size" class="btn btn-default">A</button>
+        <button id="enlarge-font-size" class="btn btn-default">A</button>
+    </div>
+
+    <ul class="list-group font-family-list">
+        <li class="list-group-item" data-font="0">Serif</li>
+        <li class="list-group-item" data-font="1">Sans</li>
+    </ul>
+
+    <div class="btn-group btn-group-xs btn-block color-theme-list">
+        <button type="button" class="btn btn-default" id="color-theme-preview-0" data-theme="0">White</button>
+        <button type="button" class="btn btn-default" id="color-theme-preview-1" data-theme="1">Sepia</button>
+        <button type="button" class="btn btn-default" id="color-theme-preview-2" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </span>
+
+    <!-- Actions Right -->
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Share on Google Plus"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Share on Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Share on Twitter"><i class="fa fa-twitter"></i></a>
+    
+
+    
+    <a href="https://github.com/highercomve/ruby_cero/stargazers" target="_blank" class="btn pull-right count-star hidden-xs"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/highercomve/ruby_cero/watchers" target="_blank" class="btn pull-right count-watch hidden-xs"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-spinner fa-spin"></i>
+        <a href="../" >Ruby desde Cero - Escuelaweb</a>
+    </h1>
+</div>
+
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        
+        
+        <li>
+            <a href="https://github.com/highercomve" target="blank" class="author-link">About the author</a>
+        </li>
+        
+
+        
+        
+        <li>
+            <a href="https://github.com/highercomve/ruby_cero/issues" target="blank"class="issues-link">Questions and Issues</a>
+        </li>
+        
+
+        
+        
+        <li>
+            <a href="https://github.com/highercomve/ruby_cero/edit/master/programacion_basica_con_ruby/variables.md" target="blank" class="contribute-link">Edit and Contribute</a>
+        </li>
+        
+
+        
+        <li class="divider"></li>
+        
+
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+    
+        <li class="chapter " data-level="1" data-path="index.html">
+            
+            <a href="../index.html">
+                <i class="fa fa-check"></i> <b>1.</b> Introducción
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="instalacion/README.html">
+            
+            <a href="../instalacion/README.html">
+                <i class="fa fa-check"></i> <b>2.</b> Instalación
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="programacion_basica_con_ruby/README.html">
+            
+            <a href="../programacion_basica_con_ruby/README.html">
+                <i class="fa fa-check"></i> <b>3.</b> Programación Basica con Ruby
+            </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="programacion_basica_con_ruby/variables.html">
+            
+            <a href="../programacion_basica_con_ruby/variables.html">
+                <i class="fa fa-check"></i> <b>3.1.</b> Variables
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="programacion_basica_con_ruby/estructuras_de_control.html">
+            
+            <a href="../programacion_basica_con_ruby/estructuras_de_control.html">
+                <i class="fa fa-check"></i> <b>3.2.</b> Estructuras de control
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="programacion_basica_con_ruby/ciclos.html">
+            
+            <a href="../programacion_basica_con_ruby/ciclos.html">
+                <i class="fa fa-check"></i> <b>3.3.</b> Ciclos
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="programacion_basica_con_ruby/entrada_y_salida_basica.html">
+            
+            <a href="../programacion_basica_con_ruby/entrada_y_salida_basica.html">
+                <i class="fa fa-check"></i> <b>3.4.</b> Entrada y Salida Basica
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="programacion_basica_con_ruby/introduccion_a_expresiones_regulares_en_ruby.html">
+            
+            <a href="../programacion_basica_con_ruby/introduccion_a_expresiones_regulares_en_ruby.html">
+                <i class="fa fa-check"></i> <b>3.5.</b> Introducción a Expresiones Regulares en Ruby
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="programacion_basica_con_ruby/bloques_e_iteradores.html">
+            
+            <a href="../programacion_basica_con_ruby/bloques_e_iteradores.html">
+                <i class="fa fa-check"></i> <b>3.6.</b> Bloques e iteradores
+            </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="ruby_orientado_a_objetos/README.html">
+            
+            <a href="../ruby_orientado_a_objetos/README.html">
+                <i class="fa fa-check"></i> <b>4.</b> Ruby Orientado a Objetos
+            </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="ruby_orientado_a_objetos/clases,_objetos_y_variables.html">
+            
+            <a href="../ruby_orientado_a_objetos/clases,_objetos_y_variables.html">
+                <i class="fa fa-check"></i> <b>4.1.</b> Clases, Objetos y variables
+            </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank" class="gitbook-link">Generated using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="page-wrapper" tabindex="-1">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 30%;min-width: 20%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introducción" class="chapter done new-chapter" data-progress="1" style="left: 0%;"></a>
+    
+        <a href="../instalacion/README.html" title="Instalación" class="chapter done new-chapter" data-progress="2" style="left: 10%;"></a>
+    
+        <a href="../programacion_basica_con_ruby/README.html" title="Programación Basica con Ruby" class="chapter done new-chapter" data-progress="3" style="left: 20%;"></a>
+    
+        <a href="../programacion_basica_con_ruby/variables.html" title="Variables" class="chapter done " data-progress="3.1" style="left: 30%;"></a>
+    
+        <a href="../programacion_basica_con_ruby/estructuras_de_control.html" title="Estructuras de control" class="chapter  " data-progress="3.2" style="left: 40%;"></a>
+    
+        <a href="../programacion_basica_con_ruby/ciclos.html" title="Ciclos" class="chapter  " data-progress="3.3" style="left: 50%;"></a>
+    
+        <a href="../programacion_basica_con_ruby/entrada_y_salida_basica.html" title="Entrada y Salida Basica" class="chapter  " data-progress="3.4" style="left: 60%;"></a>
+    
+        <a href="../programacion_basica_con_ruby/introduccion_a_expresiones_regulares_en_ruby.html" title="Introducción a Expresiones Regulares en Ruby" class="chapter  " data-progress="3.5" style="left: 70%;"></a>
+    
+        <a href="../programacion_basica_con_ruby/bloques_e_iteradores.html" title="Bloques e iteradores" class="chapter  " data-progress="3.6" style="left: 80%;"></a>
+    
+        <a href="../ruby_orientado_a_objetos/README.html" title="Ruby Orientado a Objetos" class="chapter  new-chapter" data-progress="4" style="left: 90%;"></a>
+    
+        <a href="../ruby_orientado_a_objetos/clases,_objetos_y_variables.html" title="Clases, Objetos y variables" class="chapter  " data-progress="4.1" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_9">
+                    
+                        <h1 id="variables-y-constantes">Variables y Constantes</h1>
+<p>Las variables y constantes son una herramienta básica de la programación para almacenar datos en memoria. De esa manera hacer dinámico nuestro programa.</p>
+<h2 id="variables">Variables</h2>
+<p>Las variables las podemos relacionar con una caja o un lugar donde vamos a almacenar un dato el cual podemos usar luego.</p>
+<p>Ejemplo:</p>
+<p>Imaginen un juego, donde tienen su personaje. Ese persona tiene muchas características propias del personaje, tomemos una de manera aleatoria: Su vida.</p>
+<p>La vida del personaje es una variable con la cual podemos realizar cálculos, como sumarle vida si tomamos una posicion de curación, restarle vida si nos golpean, y en el caso de que la vida llegara a 0 se podría decir que nuestro personaje ha muerto. </p>
+<p>Lo importante es tomar el concepto de la variable VIDA la cual nos permite almacenar un dato dinámico (puede cambiar).</p>
+<p>En ruby las variables se definen de la siguiente manera:</p>
+<pre><code class="lang-ruby">vida = <span class="hljs-number">100</span>
+
+<span class="hljs-comment"># Se pueden realizar operaciones básicas matemáticas como +, - , /, *</span>
+vida = vida - <span class="hljs-number">20</span>
+vida = vida + <span class="hljs-number">20</span>
+vida = vida / <span class="hljs-number">2</span>
+vida = vida * <span class="hljs-number">2</span>
+</code></pre>
+<h2 id="constantes">Constantes</h2>
+<p>Las constantes son al igual que las variables una herramienta que nos permite almacenar un dato, pero diferencia de las variables el contenido no puede variar en el tiempo.</p>
+<p>Siguiendo el ejemplo anterior.</p>
+<p>Si queremos mantener almacenado la cantidad de vida que suma un pote de curación pequeno, deberíamos almacenarlo en un Constante, ya que, siempre suma la misma cantidad de vida.</p>
+<pre><code class="lang-ruby">vida = <span class="hljs-number">100</span>
+<span class="hljs-constant">POTE_PEQUENO</span> = <span class="hljs-number">20</span>
+<span class="hljs-constant">VENENO_PEQUENO</span> = <span class="hljs-number">10</span>
+
+<span class="hljs-comment"># Se pueden realizar operaciones básicas matemáticas como +, - , /, *</span>
+vida = vida + <span class="hljs-constant">POTE_PEQUENO</span>
+vida = vida - <span class="hljs-constant">VENENO_PEQUENO</span>
+</code></pre>
+<h2 id="orientado-a-objetos">Orientado a Objetos</h2>
+<p>Ruby es un lenguaje interpretado Orientado a Objetos no fuertemente tipado, por lo tanto todo es un objeto. Por lo tanto vamos a ver como funcionan alguna variables y tipos de datos básicos.</p>
+<p>Para manejar este intro básico podemos usar el intérprete interactivo de Ruby (irb).</p>
+<p>Ya que, en ruby todo es un Objeto podemos observar desde el irb que los siguientes datos pueden usar el metodo &quot;class&quot; el cual retorna el tipo de objeto que es el dato.
+Al mismo tiempo sobre cualquier objeto podemos usar el metodo &quot;methods&quot; el cual retorna todos los metodos que puede usar un objeto.</p>
+<pre><code class="lang-ruby"><span class="hljs-number">2.1</span>.<span class="hljs-number">1</span> <span class="hljs-symbol">:</span><span class="hljs-number">001</span> &gt; <span class="hljs-number">1</span>.<span class="hljs-keyword">class</span>
+=&gt; <span class="hljs-constant">Fixnum</span>
+<span class="hljs-number">2.1</span>.<span class="hljs-number">1</span> <span class="hljs-symbol">:</span><span class="hljs-number">002</span> &gt; <span class="hljs-string">"Un string"</span>.<span class="hljs-keyword">class</span>
+=&gt; <span class="hljs-constant">String</span>
+<span class="hljs-number">2.1</span>.<span class="hljs-number">1</span> <span class="hljs-symbol">:</span><span class="hljs-number">003</span> &gt; [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>].<span class="hljs-keyword">class</span>
+=&gt; <span class="hljs-constant">Array</span>
+<span class="hljs-number">2.1</span>.<span class="hljs-number">1</span> <span class="hljs-symbol">:</span><span class="hljs-number">004</span> &gt; <span class="hljs-number">1</span>.methods
+ =&gt; [<span class="hljs-symbol">:to_s</span>, <span class="hljs-symbol">:inspect</span>, <span class="hljs-symbol">:-@</span>, <span class="hljs-symbol">:+</span>, <span class="hljs-symbol">:-</span>, <span class="hljs-symbol">:*</span>, <span class="hljs-symbol">:/</span>, <span class="hljs-symbol">:div</span>, <span class="hljs-symbol">:%</span>, <span class="hljs-symbol">:modulo</span>, <span class="hljs-symbol">:divmod</span>, <span class="hljs-symbol">:fdiv</span>, <span class="hljs-symbol">:**</span>, <span class="hljs-symbol">:abs</span>, <span class="hljs-symbol">:magnitude</span>, <span class="hljs-symbol">:==</span>, <span class="hljs-symbol">:===</span>, <span class="hljs-symbol">:&lt;=&gt;</span>, <span class="hljs-symbol">:&gt;</span>, <span class="hljs-symbol">:&gt;=</span>, <span class="hljs-symbol">:&lt;</span>, <span class="hljs-symbol">:&lt;=</span>, <span class="hljs-symbol">:~</span>, <span class="hljs-symbol">:&amp;</span>, <span class="hljs-symbol">:|</span>, <span class="hljs-symbol">:^</span>, <span class="hljs-symbol">:[]</span>, <span class="hljs-symbol">:&lt;&lt;</span>, <span class="hljs-symbol">:&gt;&gt;</span>, <span class="hljs-symbol">:to_f</span>, <span class="hljs-symbol">:size</span>, <span class="hljs-symbol">:bit_length</span>, <span class="hljs-symbol">:zero?</span>, <span class="hljs-symbol">:odd?</span>, <span class="hljs-symbol">:even?</span>, <span class="hljs-symbol">:succ</span>, <span class="hljs-symbol">:integer?</span>, <span class="hljs-symbol">:upto</span>, <span class="hljs-symbol">:downto</span>, <span class="hljs-symbol">:times</span>, <span class="hljs-symbol">:next</span>, <span class="hljs-symbol">:pred</span>, <span class="hljs-symbol">:chr</span>, <span class="hljs-symbol">:ord</span>, <span class="hljs-symbol">:to_i</span>, <span class="hljs-symbol">:to_int</span>, <span class="hljs-symbol">:floor</span>, <span class="hljs-symbol">:ceil</span>, <span class="hljs-symbol">:truncate</span>, <span class="hljs-symbol">:round</span>, <span class="hljs-symbol">:gcd</span>, <span class="hljs-symbol">:lcm</span>, <span class="hljs-symbol">:gcdlcm</span>, <span class="hljs-symbol">:numerator</span>, <span class="hljs-symbol">:denominator</span>, <span class="hljs-symbol">:to_r</span>, <span class="hljs-symbol">:rationalize</span>, <span class="hljs-symbol">:singleton_method_added</span>, <span class="hljs-symbol">:coerce</span>, <span class="hljs-symbol">:i</span>, <span class="hljs-symbol">:+@</span>, <span class="hljs-symbol">:eql?</span>, <span class="hljs-symbol">:remainder</span>, <span class="hljs-symbol">:real?</span>, <span class="hljs-symbol">:nonzero?</span>, <span class="hljs-symbol">:step</span>, <span class="hljs-symbol">:quo</span>, <span class="hljs-symbol">:to_c</span>, <span class="hljs-symbol">:real</span>, <span class="hljs-symbol">:imaginary</span>, <span class="hljs-symbol">:imag</span>, <span class="hljs-symbol">:abs2</span>, <span class="hljs-symbol">:arg</span>, <span class="hljs-symbol">:angle</span>, <span class="hljs-symbol">:phase</span>, <span class="hljs-symbol">:rectangular</span>, <span class="hljs-symbol">:rect</span>, <span class="hljs-symbol">:polar</span>, <span class="hljs-symbol">:conjugate</span>, <span class="hljs-symbol">:conj</span>, <span class="hljs-symbol">:between?</span>, <span class="hljs-symbol">:nil?</span>, <span class="hljs-symbol">:=~</span>, <span class="hljs-symbol">:</span>!~, <span class="hljs-symbol">:hash</span>, <span class="hljs-symbol">:class</span>, <span class="hljs-symbol">:singleton_class</span>, <span class="hljs-symbol">:clone</span>, <span class="hljs-symbol">:dup</span>, <span class="hljs-symbol">:taint</span>, <span class="hljs-symbol">:tainted?</span>, <span class="hljs-symbol">:untaint</span>, <span class="hljs-symbol">:untrust</span>, <span class="hljs-symbol">:untrusted?</span>, <span class="hljs-symbol">:trust</span>, <span class="hljs-symbol">:freeze</span>, <span class="hljs-symbol">:frozen?</span>, <span class="hljs-symbol">:methods</span>, <span class="hljs-symbol">:singleton_methods</span>, <span class="hljs-symbol">:protected_methods</span>, <span class="hljs-symbol">:private_methods</span>, <span class="hljs-symbol">:public_methods</span>, <span class="hljs-symbol">:instance_variables</span>, <span class="hljs-symbol">:instance_variable_get</span>, <span class="hljs-symbol">:instance_variable_set</span>, <span class="hljs-symbol">:instance_variable_defined?</span>, <span class="hljs-symbol">:remove_instance_variable</span>, <span class="hljs-symbol">:instance_of?</span>, <span class="hljs-symbol">:kind_of?</span>, <span class="hljs-symbol">:is_a?</span>, <span class="hljs-symbol">:tap</span>, <span class="hljs-symbol">:send</span>, <span class="hljs-symbol">:public_send</span>, <span class="hljs-symbol">:respond_to?</span>, <span class="hljs-symbol">:extend</span>, <span class="hljs-symbol">:display</span>, <span class="hljs-symbol">:method</span>, <span class="hljs-symbol">:public_method</span>, <span class="hljs-symbol">:singleton_method</span>, <span class="hljs-symbol">:define_singleton_method</span>, <span class="hljs-symbol">:object_id</span>, <span class="hljs-symbol">:to_enum</span>, <span class="hljs-symbol">:enum_for</span>, <span class="hljs-symbol">:equal?</span>, <span class="hljs-symbol">:</span>!, <span class="hljs-symbol">:</span>!=, <span class="hljs-symbol">:instance_eval</span>, <span class="hljs-symbol">:instance_exec</span>, <span class="hljs-symbol">:__send__</span>, <span class="hljs-symbol">:__id__</span>]&gt;&gt;]
+</code></pre>
+<p>En cuanto a la sintaxis básica en Ruby las variables solo deben indicar el nombre de la misma, no utiliza ningun otro caracter para definirla.</p>
+<pre><code class="lang-ruby"><span class="hljs-number">2.1</span>.<span class="hljs-number">1</span> <span class="hljs-symbol">:</span><span class="hljs-number">005</span> &gt; un_string = <span class="hljs-string">"Sergio Marin"</span>
+=&gt; <span class="hljs-string">"Sergio Marin"</span>
+
+<span class="hljs-number">2.1</span>.<span class="hljs-number">1</span> <span class="hljs-symbol">:</span><span class="hljs-number">006</span> &gt; un_integer = <span class="hljs-number">123</span>
+=&gt; <span class="hljs-number">123</span>
+
+<span class="hljs-number">2.1</span>.<span class="hljs-number">1</span> <span class="hljs-symbol">:</span><span class="hljs-number">007</span> &gt; un_float = <span class="hljs-number">123.123</span>
+=&gt; <span class="hljs-number">123.123</span>
+
+<span class="hljs-number">2.1</span>.<span class="hljs-number">1</span> <span class="hljs-symbol">:</span><span class="hljs-number">00</span>9 &gt; un_array = [<span class="hljs-number">1</span>, <span class="hljs-string">"los arreglos"</span>, <span class="hljs-string">"soportan"</span>, <span class="hljs-string">"mezclar tipos de datos"</span>, <span class="hljs-number">1234.4556</span>]
+=&gt; [<span class="hljs-number">1</span>, <span class="hljs-string">"los arreglos"</span>, <span class="hljs-string">"soportan"</span>, <span class="hljs-string">"mezclar tipos de datos"</span>, <span class="hljs-number">1234.4556</span>]
+
+<span class="hljs-number">2.1</span>.<span class="hljs-number">1</span> <span class="hljs-symbol">:</span><span class="hljs-number">012</span> &gt; un_hash = {<span class="hljs-symbol">este_key:</span> <span class="hljs-string">"Este es el valor"</span>, <span class="hljs-symbol">otro_key:</span> <span class="hljs-string">"otro valor"</span>}
+=&gt; {<span class="hljs-symbol">:este_key=&gt;<span class="hljs-string">"Este es el valor"</span></span>, <span class="hljs-symbol">:otro_key=&gt;<span class="hljs-string">"otro valor"</span></span>}
+</code></pre>
+<p>Las constantes en Ruby se definen con el nombre de la misma toda en Mayúscula</p>
+<pre><code class="lang-ruby"><span class="hljs-number">2.1</span>.<span class="hljs-number">1</span> <span class="hljs-symbol">:</span><span class="hljs-number">010</span> &gt; <span class="hljs-constant">UNA_CONSTANTE</span> = <span class="hljs-number">2</span>
+=&gt; <span class="hljs-number">2</span>
+</code></pre>
+<h2 id="manejo-de-arreglos">Manejo de Arreglos</h2>
+<p>Los arreglos en Ruby como objeto de la clase Array tienen una serie de métodos, los cuales son muy útiles y permiten una cantidad de operaciones muy interesantes que nos pueden simplificar la vida.</p>
+<pre><code class="lang-ruby"><span class="hljs-comment"># definamos un array</span>
+
+<span class="hljs-number">2.1</span>.<span class="hljs-number">1</span> <span class="hljs-symbol">:</span><span class="hljs-number">013</span> &gt; un_array = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span> ,<span class="hljs-number">5</span> ,<span class="hljs-number">6</span>, <span class="hljs-number">7</span> ,<span class="hljs-number">8</span> ,<span class="hljs-number">9</span> ,<span class="hljs-number">0</span>]
+=&gt; [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">0</span>]
+
+<span class="hljs-number">2.1</span>.<span class="hljs-number">1</span> <span class="hljs-symbol">:</span><span class="hljs-number">02</span>9 &gt; un_array.size
+=&gt; <span class="hljs-number">10</span>
+
+<span class="hljs-comment">## Podemos tomar el valor de una posición del arreglo de la siguiente manera</span>
+
+<span class="hljs-number">2.1</span>.<span class="hljs-number">1</span> <span class="hljs-symbol">:</span><span class="hljs-number">014</span> &gt; un_array[<span class="hljs-number">0</span>]
+=&gt; <span class="hljs-number">1</span>
+
+<span class="hljs-number">2.1</span>.<span class="hljs-number">1</span> <span class="hljs-symbol">:</span><span class="hljs-number">015</span> &gt; un_array[<span class="hljs-number">2</span>]
+=&gt; <span class="hljs-number">3</span>
+
+<span class="hljs-number">2.1</span>.<span class="hljs-number">1</span> <span class="hljs-symbol">:</span><span class="hljs-number">016</span> &gt; un_array[<span class="hljs-number">9</span>]
+=&gt; <span class="hljs-number">0</span>
+
+<span class="hljs-comment">## Podemos vaciar el arreglo con el método clear</span>
+
+<span class="hljs-number">2.1</span>.<span class="hljs-number">1</span> <span class="hljs-symbol">:</span><span class="hljs-number">017</span> &gt; un_array.clear
+=&gt; []
+
+<span class="hljs-comment">## Si necesitamos ordenar el arreglo de manera invertida usamos el metodo .reverse, este metodo retorna el arreglo con el orden invertido, mas no modifica al arreglo original</span>
+
+<span class="hljs-number">2.1</span>.<span class="hljs-number">1</span> <span class="hljs-symbol">:</span><span class="hljs-number">01</span>8 &gt; un_array = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span> ,<span class="hljs-number">5</span> ,<span class="hljs-number">6</span>, <span class="hljs-number">7</span> ,<span class="hljs-number">8</span> ,<span class="hljs-number">9</span> ,<span class="hljs-number">0</span>]
+=&gt; [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">0</span>]
+
+<span class="hljs-number">2.1</span>.<span class="hljs-number">1</span> <span class="hljs-symbol">:</span><span class="hljs-number">01</span>9 &gt; un_array.reverse
+=&gt; [<span class="hljs-number">0</span>, <span class="hljs-number">9</span>, <span class="hljs-number">8</span>, <span class="hljs-number">7</span>, <span class="hljs-number">6</span>, <span class="hljs-number">5</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>]
+
+<span class="hljs-number">2.1</span>.<span class="hljs-number">1</span> <span class="hljs-symbol">:</span><span class="hljs-number">020</span> &gt; un_array.reverse[<span class="hljs-number">0</span>]
+=&gt; <span class="hljs-number">0</span>
+
+<span class="hljs-number">2.1</span>.<span class="hljs-number">1</span> <span class="hljs-symbol">:</span><span class="hljs-number">021</span> &gt; un_array.reverse[<span class="hljs-number">1</span>]
+=&gt; <span class="hljs-number">9</span>
+
+<span class="hljs-comment">## Si necesitamos ordenar el arreglo de mayor a menor podemos usar el metodo sort</span>
+
+<span class="hljs-number">2.1</span>.<span class="hljs-number">1</span> <span class="hljs-symbol">:</span><span class="hljs-number">022</span> &gt; un_array.sort
+=&gt; [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>]
+
+<span class="hljs-comment">## Si necesitamos borrar elementos de un arreglo existen dos métodos.</span>
+
+<span class="hljs-number">2.1</span>.<span class="hljs-number">1</span> <span class="hljs-symbol">:</span><span class="hljs-number">023</span> &gt; otro_array = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-string">"cuatro"</span>, <span class="hljs-string">"cinco"</span>, <span class="hljs-string">"seis"</span>]
+=&gt; [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-string">"cuatro"</span>, <span class="hljs-string">"cinco"</span>, <span class="hljs-string">"seis"</span>]
+
+<span class="hljs-comment"># El delete_at elimina una posición</span>
+
+<span class="hljs-number">2.1</span>.<span class="hljs-number">1</span> <span class="hljs-symbol">:</span><span class="hljs-number">024</span> &gt; otro_array.delete_at(<span class="hljs-number">3</span>)
+=&gt; <span class="hljs-string">"cuatro"</span>
+
+<span class="hljs-number">2.1</span>.<span class="hljs-number">1</span> <span class="hljs-symbol">:</span><span class="hljs-number">025</span> &gt; otro_array
+=&gt; [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-string">"cinco"</span>, <span class="hljs-string">"seis"</span>]
+
+<span class="hljs-comment"># El delete elimina un objeto dentro del array</span>
+
+<span class="hljs-number">2.1</span>.<span class="hljs-number">1</span> <span class="hljs-symbol">:</span><span class="hljs-number">026</span> &gt; otro_array.delete(<span class="hljs-string">"seis"</span>)
+=&gt; <span class="hljs-string">"seis"</span>
+
+<span class="hljs-number">2.1</span>.<span class="hljs-number">1</span> <span class="hljs-symbol">:</span><span class="hljs-number">027</span> &gt; otro_array
+=&gt; [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-string">"cinco"</span>]
+</code></pre>
+<p>Los hash en otros lenguajes como PHP son un array con key value. En ruby son un tipo de dato distinto.</p>
+<pre><code class="lang-ruby">
+<span class="hljs-number">2.1</span>.<span class="hljs-number">1</span> <span class="hljs-symbol">:</span><span class="hljs-number">030</span> &gt; un_hash = {<span class="hljs-symbol">este_key:</span> <span class="hljs-string">"Este es el valor"</span>, <span class="hljs-symbol">otro_key:</span> <span class="hljs-string">"otro valor"</span>}
+=&gt; {<span class="hljs-symbol">:este_key=&gt;<span class="hljs-string">"Este es el valor"</span></span>, <span class="hljs-symbol">:otro_key=&gt;<span class="hljs-string">"otro valor"</span></span>}
+
+<span class="hljs-number">2.1</span>.<span class="hljs-number">1</span> <span class="hljs-symbol">:</span><span class="hljs-number">031</span> &gt; un_hash[<span class="hljs-symbol">:este_key</span>]
+=&gt; <span class="hljs-string">"Este es el valor"</span>
+
+<span class="hljs-number">2.1</span>.<span class="hljs-number">1</span> <span class="hljs-symbol">:</span><span class="hljs-number">032</span> &gt; un_hash[<span class="hljs-symbol">:otro_key</span>]
+=&gt; <span class="hljs-string">"otro valor"</span>
+</code></pre>
+<h2 id="conclusi-n">Conclusión</h2>
+<p>En general este puede ser el uso de variables y tipos de datos básicos que podemos usar en Ruby.</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../programacion_basica_con_ruby/README.html" class="navigation navigation-prev " aria-label="Previous page: Programación Basica con Ruby"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../programacion_basica_con_ruby/estructuras_de_control.html" class="navigation navigation-next " aria-label="Next page: Estructuras de control"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mixpanel/plugin.js"></script>
+    
+
+    
+    <script src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

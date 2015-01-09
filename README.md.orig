@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+GitBook Example
+=======
+
+Welcome in your GitBook!
+=======
 # Ruby desde Cero
 
 Este libro es parte del contenido del curso de Ruby desde Cero dictado en Escuelaweb.net y su contenido no deberia ser distribuido.
@@ -10,3 +16,4 @@ Sergio Marin, director de Escuelaweb. Es un Rubista apasionado por el desarrollo
 - Listar Ranking de usuarios por tipo de personajes, niveles, rangos y otras caracteristicas.
 
 Con el pasar del tiempo trabajando en PHP y comenzar la universidad comence a conocer otros lenguajes de programación, hasta que en algun punto en el 2008 comence a desarrollar en Ruby de la mano con Ruby on Rails. Pero Ruby no es solo RoR (Ruby on Rails), es mucho más y de eso se trata este curso y este libro.
+>>>>>>> d050cfa19bf8e64210819330844be7aef0642663
